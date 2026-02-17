@@ -32,4 +32,7 @@ fetch('https://raw.githubusercontent.com/sedc-codecademy/skwd9-04-ajs/main/Sampl
     .filter(student => student.gender === 'Male' && student.firstName[0] === 'B' && student.averageGrade > 2)
     console.log(maleNamesWithB)
 
-})
+
+}).catch(error => {
+    console.log(error)
+}) 
