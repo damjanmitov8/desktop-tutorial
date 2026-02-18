@@ -32,7 +32,56 @@ fetch('https://raw.githubusercontent.com/sedc-codecademy/skwd9-04-ajs/main/Sampl
     .filter(student => student.gender === 'Male' && student.firstName[0] === 'B' && student.averageGrade > 2)
     console.log(maleNamesWithB)
 
+    // New requirements
+    
+    let studentOlder30 = data
+    .filter(student => student.age > 30)
+    .map(student => `My name is: ${student.firstName} ${student.lastName}; From: ${student.city}`)
+    console.log(studentOlder30)
+
+    let studentsWithLetterB = data
+    .filter(student => student.firstName[0] === 'B')
+    .map(student => `My name is: ${student.firstName} ${student.lastName}; From: ${student.city}`)
+    console.log(studentsWithLetterB)
+
+    let studentsEmails = data
+    .map(student => student.email)
+    console.log(studentsEmails)
+
+    let studentExactly3Grade = data
+    .filter(student => student.averageGrade === 3)
+    .map(student => `${student.firstName} ${student.lastName}`)
+    console.log(studentExactly3Grade)
+
+
+    let femaleCounter = 0
+    let maleCounter = 0
+    data.forEach((student) => {
+        if(student.gender === 'Male'){
+            maleCounter++
+        }else{
+            femaleCounter++
+        }
+    })
+    console.log(`Female students : ${femaleCounter}`)
+    console.log(`Male students: ${maleCounter}`)
+
+
+    // Ova e istoto resenie za poslednata tocka sakav da probam i so reduce kako se resava ,so mala pomos od net ja resiv :)
+    let femaleAndMaleStudents = data.reduce((acc,student) => {
+        if(student.gender === 'Male'){
+            acc.male = acc.male || 0
+           acc.male++
+        }else{
+            acc.female = acc.female || 0
+           acc.female++
+        }
+        return acc
+    },{})
+    console.log(femaleAndMaleStudents)
+
 
 }).catch(error => {
     console.log(error)
 }) 
+
