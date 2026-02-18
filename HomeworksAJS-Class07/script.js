@@ -7,6 +7,14 @@
 // The average grades of all female students over the age of 24
 // All male students with a name starting with B and average grade over 2
 
+// New requirements HOMEWORK
+
+// All students who are older than 30 (return full name + age)
+// All students from a city that starts with B (return full name + city)
+// All student emails (just an array of emails)
+// All students with average grade exactly 3 (return full name)
+// Count how many students are Female and how many are Male
+
 fetch('https://raw.githubusercontent.com/sedc-codecademy/skwd9-04-ajs/main/Samples/students_v2.json')
 .then(respone => respone.json())
 .then(data => {
@@ -84,4 +92,5 @@ fetch('https://raw.githubusercontent.com/sedc-codecademy/skwd9-04-ajs/main/Sampl
 }).catch(error => {
     console.log(error)
 }) 
+
 
