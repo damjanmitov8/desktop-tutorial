@@ -147,93 +147,94 @@ networkStudent.getAcademy()
 // EXAMPLE 2 
 
 // function Person(firstName, lastName, age) {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//     this.age = age;
+//     this.firstName = firstName
+//     this.lastName = lastName
+//     this.age = age
 // }
 
 // Person.prototype.getFullName = function() {
-//     return `I'm ${this.firstName} ${this.lastName}`;
-// };
-
-// Person.prototype.getAcademy = function() {
-//     return `${this.firstName} ${this.lastName} is in ${this.academyName} academy`;
-// };
-
-// function Student(firstName, lastName, age, academyName, studentId) {
-//     Person.call(this, firstName, lastName, age);
-//     this.academyName = academyName;
-//     this.studentId = studentId;
+//     return `I'm ${this.firstName} ${this.lastName}`
 // }
 
-// Student.prototype = Object.create(Person.prototype);
-// Student.prototype.constructor = Student;
+// Person.prototype.getAcademy = function() {
+//     return `${this.firstName} ${this.lastName} is in ${this.academyName} academy`
+// }
+
+// function Student(firstName, lastName, age, academyName, studentId) {
+//     Person.call(this, firstName, lastName, age)
+//     this.academyName = academyName
+//     this.studentId = studentId
+// }
+
+// Student.prototype = Object.create(Person.prototype)
+// Student.prototype.constructor = Student
 
 // Student.prototype.study = function() {
-//     console.log(`The student ${this.firstName} is studying in the ${this.academyName} academy`);
+//     console.log(`The student ${this.firstName} is studying in the ${this.academyName} academy`)
 // };
 
 // function DesignStudent(firstName, lastName, age, studentId, isStudentOfTheMonth) {
-//     Student.call(this, firstName, lastName, age, "Design", studentId);
-//     this.isStudentOfTheMonth = isStudentOfTheMonth;
+//     Student.call(this, firstName, lastName, age, "Design", studentId)
+//     this.isStudentOfTheMonth = isStudentOfTheMonth
 // }
 
 // DesignStudent.prototype = Object.create(Student.prototype);
-// DesignStudent.prototype.constructor = DesignStudent;
+// DesignStudent.prototype.constructor = DesignStudent
 
 // DesignStudent.prototype.attendAdobeExam = function() {
-//     console.log(`The student ${this.firstName} is doing an Adobe exam!`);
-// };
-
-// function CodeStudent(firstName, lastName, age, studentId, hasIndividualProject = false, hasGroupProject = false) {
-//     Student.call(this, firstName, lastName, age, "Code", studentId);
-//     this.hasIndividualProject = hasIndividualProject;
-//     this.hasGroupProject = hasGroupProject;
+//     console.log(`The student ${this.firstName} is doing an Adobe exam!`)
 // }
 
-// CodeStudent.prototype = Object.create(Student.prototype);
-// CodeStudent.prototype.constructor = CodeStudent;
+// function CodeStudent(firstName, lastName, age, studentId, hasIndividualProject = false, hasGroupProject = false) {
+//     Student.call(this, firstName, lastName, age, "Code", studentId)
+//     this.hasIndividualProject = hasIndividualProject
+//     this.hasGroupProject = hasGroupProject
+// }
+
+// CodeStudent.prototype = Object.create(Student.prototype)
+// CodeStudent.prototype.constructor = CodeStudent
 
 // CodeStudent.prototype.doProject = function(type) {
 //     if (type === "individual") {
-//         console.log(`${this.firstName} ${this.lastName} is working on an individual project`);
-//         this.hasIndividualProject = true;
+//         console.log(`${this.firstName} ${this.lastName} is working on an individual project`)
+//         this.hasIndividualProject = true
 //     } else if (type === "group") {
-//         console.log(`${this.firstName} ${this.lastName} is working on a group project`);
-//         this.hasGroupProject = true;
+//         console.log(`${this.firstName} ${this.lastName} is working on a group project`)
+//         this.hasGroupProject = true
 //     }
-// };
-
-// function NetworkStudent(firstName, lastName, age, studentId, academyPart) {
-//     Student.call(this, firstName, lastName, age, "Network", studentId);
-//     this.academyPart = academyPart;
 // }
 
-// NetworkStudent.prototype = Object.create(Student.prototype);
-// NetworkStudent.prototype.constructor = NetworkStudent;
+// function NetworkStudent(firstName, lastName, age, studentId, academyPart) {
+//     Student.call(this, firstName, lastName, age, "Network", studentId)
+//     this.academyPart = academyPart
+// }
+
+// NetworkStudent.prototype = Object.create(Student.prototype)
+// NetworkStudent.prototype.constructor = NetworkStudent
 
 // NetworkStudent.prototype.attendCiscoExam = function() {
-//     console.log(`The student ${this.firstName} is doing a Cisco exam!`);
-// };
+//     console.log(`The student ${this.firstName} is doing a Cisco exam!`)
+// }
 
-// let designStudent1 = new DesignStudent('Martin','Ivanovski',25,4,false);
-// let codeStudent1 = new CodeStudent('Damjan','Mitov',24,1);
-// let networkStudent1 = new NetworkStudent('Ivan','Stojanovski',26,2,1);
+// let designStudent1 = new DesignStudent('Martin','Ivanovski',25,4,false)
+// let codeStudent1 = new CodeStudent('Damjan','Mitov',24,1)
+// let networkStudent1 = new NetworkStudent('Ivan','Stojanovski',26,2,1)
 
 // console.log(designStudent1)
-// console.log(designStudent1.getFullName());
-// designStudent1.study();
-// designStudent1.attendAdobeExam();
-// console.log(designStudent1.getAcademy());
+// console.log(designStudent1.getFullName())
+// designStudent1.study()
+// designStudent1.attendAdobeExam()
+// console.log(designStudent1.getAcademy())
 
 // console.log(codeStudent1)
-// console.log(codeStudent1.getFullName());
-// codeStudent1.study();
-// codeStudent1.doProject('individual');
-// console.log(codeStudent1.getAcademy());
+// console.log(codeStudent1.getFullName())
+// codeStudent1.study()
+// codeStudent1.doProject('individual')
+// console.log(codeStudent1.getAcademy())
 
 // console.log(networkStudent1)
 // console.log(networkStudent1.getFullName());
 // networkStudent1.study();
 // networkStudent1.attendCiscoExam();
+
 // console.log(networkStudent1.getAcademy());
